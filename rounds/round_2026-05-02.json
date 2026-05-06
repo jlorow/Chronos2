@@ -1,0 +1,182 @@
+{
+  "roundId": 2437,
+  "date": "2026-05-02 17:13",
+  "matches": [
+    {
+      "row": 1,
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "league": "Spain - Primera Division",
+      "result": "2",
+      "score": "0-2",
+      "odds_1": 1.95,
+      "odds_x": 3.3,
+      "odds_2": 4.2
+    },
+    {
+      "row": 2,
+      "home": "Man.Utd.",
+      "away": "Liverpool",
+      "league": "England - Premier",
+      "result": "1",
+      "score": "3-2",
+      "odds_1": 2.35,
+      "odds_x": 3.9,
+      "odds_2": 2.9
+    },
+    {
+      "row": 3,
+      "home": "Wehen",
+      "away": "Osnabruck",
+      "league": "Germany 3",
+      "result": "2",
+      "score": "2-3",
+      "odds_1": 3.5,
+      "odds_x": 3.35,
+      "odds_2": 2.0
+    },
+    {
+      "row": 4,
+      "home": "Casa Pia",
+      "away": "Tondela",
+      "league": "Portugal - Primeira Liga",
+      "result": "2",
+      "score": "0-1",
+      "odds_1": 2.3,
+      "odds_x": 3.3,
+      "odds_2": 3.2
+    },
+    {
+      "row": 5,
+      "home": "Leiria",
+      "away": "Farense",
+      "league": "Portugal - Liga De Honra",
+      "result": "2",
+      "score": "0-3",
+      "odds_1": 2.0,
+      "odds_x": 3.3,
+      "odds_2": 3.6
+    },
+    {
+      "row": 6,
+      "home": "AZ Alkmaar",
+      "away": "Twente",
+      "league": "Netherlands - Eredivisie",
+      "result": "X",
+      "score": "2-2",
+      "odds_1": 2.95,
+      "odds_x": 3.6,
+      "odds_2": 2.3
+    },
+    {
+      "row": 7,
+      "home": "Sparta",
+      "away": "Go Ahead",
+      "league": "Netherlands - Eredivisie",
+      "result": "X",
+      "score": "2-2",
+      "odds_1": 2.05,
+      "odds_x": 3.5,
+      "odds_2": 3.5
+    },
+    {
+      "row": 8,
+      "home": "Paris",
+      "away": "Brest",
+      "league": "France - Ligue 1",
+      "result": "1",
+      "score": "4-0",
+      "odds_1": 2.05,
+      "odds_x": 3.45,
+      "odds_2": 3.6
+    },
+    {
+      "row": 9,
+      "home": "Strasbourg",
+      "away": "Toulouse",
+      "league": "France - Ligue 1",
+      "result": "2",
+      "score": "1-2",
+      "odds_1": 2.85,
+      "odds_x": 3.4,
+      "odds_2": 2.45
+    },
+    {
+      "row": 10,
+      "home": "Sociedad II",
+      "away": "Burgos",
+      "league": "Spain - Segunda Division",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.95,
+      "odds_x": 3.2,
+      "odds_2": 2.5
+    },
+    {
+      "row": 11,
+      "home": "Antalya",
+      "away": "Alanyaspor",
+      "league": "Turkey - 1. Super Ligi",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 3.05,
+      "odds_x": 3.35,
+      "odds_2": 2.35
+    },
+    {
+      "row": 12,
+      "home": "Karagumruk",
+      "away": "Genclerbirligi",
+      "league": "Turkey - 1. Super Ligi",
+      "result": "1",
+      "score": "1-0",
+      "odds_1": 2.6,
+      "odds_x": 3.3,
+      "odds_2": 2.75
+    },
+    {
+      "row": 13,
+      "home": "Kasimpasa",
+      "away": "Kocaelispor",
+      "league": "Turkey - 1. Super Ligi",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.15,
+      "odds_x": 3.3,
+      "odds_2": 3.5
+    },
+    {
+      "row": 14,
+      "home": "Freiburg",
+      "away": "Wolfsburg",
+      "league": "Germany - 1. Bundesliga",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.55,
+      "odds_x": 3.35,
+      "odds_2": 2.75
+    },
+    {
+      "row": 15,
+      "home": "Aston Villa",
+      "away": "Tottenham",
+      "league": "England - Premier",
+      "result": "2",
+      "score": "1-2",
+      "odds_1": 2.2,
+      "odds_x": 3.5,
+      "odds_2": 3.45
+    },
+    {
+      "row": 16,
+      "home": "Olympique Lyon",
+      "away": "Rennes",
+      "league": "France - Ligue 1",
+      "result": "1",
+      "score": "4-2",
+      "odds_1": 2.25,
+      "odds_x": 3.5,
+      "odds_2": 3.1
+    }
+  ]
+}

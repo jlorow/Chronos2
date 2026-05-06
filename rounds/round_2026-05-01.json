@@ -1,0 +1,182 @@
+{
+  "roundId": 2437,
+  "date": "2026-05-01 09:00",
+  "matches": [
+    {
+      "row": 1,
+      "home": "Rizespor",
+      "away": "Konyaspor",
+      "league": "Turkey - 1. Super Ligi",
+      "result": "1",
+      "score": "3-2",
+      "odds_1": 1.95,
+      "odds_x": 3.5,
+      "odds_2": 3.9
+    },
+    {
+      "row": 2,
+      "home": "Bryne",
+      "away": "Sogndal",
+      "league": "Norway 2",
+      "result": "X",
+      "score": "3-3",
+      "odds_1": 2.05,
+      "odds_x": 3.4,
+      "odds_2": 3.35
+    },
+    {
+      "row": 3,
+      "home": "Kongsvinger",
+      "away": "Egersund",
+      "league": "Norway 2",
+      "result": "1",
+      "score": "2-1",
+      "odds_1": 2.1,
+      "odds_x": 3.7,
+      "odds_2": 2.9
+    },
+    {
+      "row": 4,
+      "home": "Lyn",
+      "away": "Stabaek",
+      "league": "Norway 2",
+      "result": "2",
+      "score": "0-4",
+      "odds_1": 2.4,
+      "odds_x": 3.7,
+      "odds_2": 2.45
+    },
+    {
+      "row": 5,
+      "home": "Versailles",
+      "away": "Orleans",
+      "league": "France National",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.3,
+      "odds_x": 3.35,
+      "odds_2": 2.9
+    },
+    {
+      "row": 6,
+      "home": "Brondby",
+      "away": "Nordsjaelland",
+      "league": "Denmark - Superliga -  Play Off",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.25,
+      "odds_x": 3.6,
+      "odds_2": 3.05
+    },
+    {
+      "row": 7,
+      "home": "Aubagne",
+      "away": "Briochin",
+      "league": "France National",
+      "result": "2",
+      "score": "1-2",
+      "odds_1": 2.25,
+      "odds_x": 3.3,
+      "odds_2": 3.0
+    },
+    {
+      "row": 8,
+      "home": "S.Nyonnais",
+      "away": "Wil",
+      "league": "Switzerland - Challenge League",
+      "result": "2",
+      "score": "0-1",
+      "odds_1": 2.7,
+      "odds_x": 3.25,
+      "odds_2": 2.5
+    },
+    {
+      "row": 9,
+      "home": "RKC Waalwijk",
+      "away": "Roda",
+      "league": "Netherlands - Erste Divisie Play Off",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.05,
+      "odds_x": 3.45,
+      "odds_2": 3.3
+    },
+    {
+      "row": 10,
+      "home": "Livingston",
+      "away": "Aberdeen",
+      "league": "Scotland Premier Play Out",
+      "result": "X",
+      "score": "2-2",
+      "odds_1": 2.85,
+      "odds_x": 3.3,
+      "odds_2": 2.35
+    },
+    {
+      "row": 11,
+      "home": "Dunfermline",
+      "away": "Arbroath",
+      "league": "Scotland First Division",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.15,
+      "odds_x": 3.2,
+      "odds_2": 3.3
+    },
+    {
+      "row": 12,
+      "home": "Morton",
+      "away": "Airdrie",
+      "league": "Scotland First Division",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.3,
+      "odds_x": 3.3,
+      "odds_2": 2.9
+    },
+    {
+      "row": 13,
+      "home": "Raith",
+      "away": "Ross County",
+      "league": "Scotland First Division",
+      "result": "1",
+      "score": "3-2",
+      "odds_1": 2.7,
+      "odds_x": 3.2,
+      "odds_2": 2.5
+    },
+    {
+      "row": 14,
+      "home": "Pisa",
+      "away": "Lecce",
+      "league": "Italy - Serie A",
+      "result": "2",
+      "score": "1-2",
+      "odds_1": 3.2,
+      "odds_x": 3.1,
+      "odds_2": 2.4
+    },
+    {
+      "row": 15,
+      "home": "Girona",
+      "away": "Mallorca",
+      "league": "Spain - Primera Division",
+      "result": "2",
+      "score": "0-1",
+      "odds_1": 2.1,
+      "odds_x": 3.45,
+      "odds_2": 3.5
+    },
+    {
+      "row": 16,
+      "home": "Zaragoza",
+      "away": "Granada",
+      "league": "Spain - Segunda Division",
+      "result": "2",
+      "score": "0-1",
+      "odds_1": 2.2,
+      "odds_x": 3.35,
+      "odds_2": 3.35
+    }
+  ]
+}

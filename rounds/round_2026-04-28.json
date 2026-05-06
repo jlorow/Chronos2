@@ -1,0 +1,182 @@
+{
+  "roundId": 2436,
+  "date": "2026-04-28 09:00",
+  "matches": [
+    {
+      "row": 1,
+      "home": "Bnei Sakhnin",
+      "away": "MS Ashdod",
+      "league": "Israel 1 - Play Out",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.85,
+      "odds_x": 3.2,
+      "odds_2": 2.4
+    },
+    {
+      "row": 2,
+      "home": "Maccabi T.A.",
+      "away": "Hapoel B.S.",
+      "league": "Israel 1 - Play Off",
+      "result": "1",
+      "score": "1-0",
+      "odds_1": 2.7,
+      "odds_x": 3.3,
+      "odds_2": 2.45
+    },
+    {
+      "row": 3,
+      "home": "Roda",
+      "away": "RKC Waalwijk",
+      "league": "Netherlands - Erste Divisie Play Off",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.45,
+      "odds_x": 3.35,
+      "odds_2": 2.65
+    },
+    {
+      "row": 4,
+      "home": "Feirense",
+      "away": "Torreense",
+      "league": "Portugal - Liga De Honra",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.95,
+      "odds_x": 3.1,
+      "odds_2": 2.4
+    },
+    {
+      "row": 5,
+      "home": "Southampton",
+      "away": "Ipswich",
+      "league": "England - The Championship",
+      "result": "X",
+      "score": "2-2",
+      "odds_1": 2.25,
+      "odds_x": 3.45,
+      "odds_2": 3.15
+    },
+    {
+      "row": 6,
+      "home": "Northampton",
+      "away": "Barnsley",
+      "league": "England - League One",
+      "result": "2",
+      "score": "0-1",
+      "odds_1": 2.5,
+      "odds_x": 3.3,
+      "odds_2": 2.65
+    },
+    {
+      "row": 7,
+      "home": "Peterborough",
+      "away": "Mansfield",
+      "league": "England - League One",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.45,
+      "odds_x": 3.35,
+      "odds_2": 2.65
+    },
+    {
+      "row": 8,
+      "home": "Scunthorpe",
+      "away": "Southend",
+      "league": "England 5 Play Off",
+      "result": "1",
+      "score": "1-0",
+      "odds_1": 3.6,
+      "odds_x": 3.45,
+      "odds_2": 1.95
+    },
+    {
+      "row": 9,
+      "home": "Hemel Hempstead",
+      "away": "Weston",
+      "league": "England Conf. South Play Off",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.5,
+      "odds_x": 3.2,
+      "odds_2": 2.95
+    },
+    {
+      "row": 10,
+      "home": "PSG",
+      "away": "Bayern",
+      "league": "Uefa - Champions League",
+      "result": "1",
+      "score": "5-4",
+      "odds_1": 2.35,
+      "odds_x": 4.05,
+      "odds_2": 2.8
+    },
+    {
+      "row": 11,
+      "home": "San Lorenzo",
+      "away": "Santos",
+      "league": "Copa Sudamericana",
+      "result": "X",
+      "score": "1-1",
+      "odds_1": 2.35,
+      "odds_x": 2.9,
+      "odds_2": 3.5
+    },
+    {
+      "row": 12,
+      "home": "Libertad",
+      "away": "Ind.Del Valle",
+      "league": "Copa Libertadores",
+      "result": "2",
+      "score": "2-3",
+      "odds_1": 2.7,
+      "odds_x": 3.05,
+      "odds_2": 2.6
+    },
+    {
+      "row": 13,
+      "home": "Charlotte FC",
+      "away": "Atlanta United",
+      "league": "Usa - Open Cup",
+      "result": "2",
+      "score": "0-2",
+      "odds_1": 2.1,
+      "odds_x": 3.35,
+      "odds_2": 3.25
+    },
+    {
+      "row": 14,
+      "home": "Nashville",
+      "away": "Tigres Uanl",
+      "league": "Concacaf Champions League",
+      "result": "2",
+      "score": "0-1",
+      "odds_1": 2.05,
+      "odds_x": 3.25,
+      "odds_2": 3.5
+    },
+    {
+      "row": 15,
+      "home": "Millionarios",
+      "away": "Sao Paulo",
+      "league": "Copa Sudamericana",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.1,
+      "odds_x": 3.3,
+      "odds_2": 3.7
+    },
+    {
+      "row": 16,
+      "home": "Recoleta",
+      "away": "Deportivo Cuenca",
+      "league": "Copa Sudamericana",
+      "result": "X",
+      "score": "0-0",
+      "odds_1": 2.5,
+      "odds_x": 3.05,
+      "odds_2": 2.85
+    }
+  ]
+}
