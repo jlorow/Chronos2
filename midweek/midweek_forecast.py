@@ -402,7 +402,17 @@ HIGH_DRAW_LEAGUES = {
     "brasileirao_count", "championship_count",
 }
 
-LABEL_MAP = {"1": "Home Win", "2": "Away Win", "X": "Draw"}
+LABEL_MAP = {
+    "1" : "Home",
+    "X" : "Draw",
+    "2" : "Away",
+    "1X": "Home/Draw",
+    "X2": "Draw/Away",
+    "12": "Home/Away",
+}
+
+# Chronos 2.0 — number of highest-entropy matches to assign DC picks
+DC_COUNT = 5
 
 
 # ================================================================
@@ -911,6 +921,58 @@ def score_match(match, base_rates, dc_probs=None):
     return scores
 
 
+# ================================================================
+# CHRONOS 2.0 — ENTROPY-BASED DOUBLE CHANCE
+# ================================================================
+def compute_entropy_dc(matches):
+    """
+    Chronos 2.0 core: identify the DC_COUNT highest-entropy matches
+    and assign their DC pick type.
+
+    Args:
+        matches : list of match dicts from the card
+
+    Returns:
+        dc_map          : dict mapping match index (int) to DC pick string
+        entropy_by_index: dict mapping match index to entropy value
+    """
+    import math
+
+    entropies = []
+    for i, m in enumerate(matches):
+        o1 = m["odds_1"]
+        ox = m["odds_x"]
+        o2 = m["odds_2"]
+
+        raw   = {"1": 1/o1, "X": 1/ox, "2": 1/o2}
+        total = sum(raw.values())
+        p1, pX, p2 = raw["1"]/total, raw["X"]/total, raw["2"]/total
+
+        H = 0.0
+        for p in [p1, pX, p2]:
+            if p > 0:
+                H -= p * math.log2(p)
+
+        entropies.append((i, H, p1, pX, p2))
+
+    entropies.sort(key=lambda x: x[1], reverse=True)
+    top_dc = entropies[:DC_COUNT]
+
+    dc_map = {}
+    for (i, H, p1, pX, p2) in top_dc:
+        min_prob = min(p1, pX, p2)
+        if min_prob == p1:
+            dc_pick = "X2"
+        elif min_prob == pX:
+            dc_pick = "12"
+        else:
+            dc_pick = "1X"
+        dc_map[i] = dc_pick
+
+    entropy_by_index = {e[0]: e[1] for e in entropies}
+    return dc_map, entropy_by_index
+
+
 def clamp_counts(nd, nh, na, total=13):
     nd = max(1, min(int(round(nd)), total - 2))
     nh = max(1, min(int(round(nh)), total - nd - 1))
@@ -921,7 +983,7 @@ def clamp_counts(nd, nh, na, total=13):
     return nd, nh, na
 
 
-def allocate_ticket(card, target_counts, base_rates):
+def allocate_ticket(card, target_counts, base_rates, dc_map=None):
     """
     Greedy allocation respecting Chronos budget.
     Mid-Week order: Draws first, then Homes (dominant here),
@@ -946,6 +1008,12 @@ def allocate_ticket(card, target_counts, base_rates):
     for i in range(n):
         if assigns[i] is None:
             assigns[i] = max(["1","X","2"], key=lambda o: scored[i][o])
+
+    # Chronos 2.0 — override with DC pick if this match is in dc_map
+    if dc_map:
+        for i in range(n):
+            if i in dc_map:
+                assigns[i] = dc_map[i]
 
     return assigns, scored
 
@@ -1120,6 +1188,20 @@ def main():
     classifications = [classify_match(m) for m in card]
     print_pick_summary(classifications)
 
+    # --- Chronos 2.0 — entropy-based DC map ---
+    dc_map, entropies_for_json = compute_entropy_dc(card)
+    print(f"\n  [Chronos 2.0] DC matches (top {DC_COUNT} by entropy):")
+    for idx, dc_pick in sorted(dc_map.items()):
+        home = card[idx].get("home", card[idx].get("home_team", f"Match {idx+1}"))
+        away = card[idx].get("away", card[idx].get("away_team", ""))
+        print(f"    [{idx+1:2d}] {home} vs {away}  \u2192  {dc_pick}")
+
+    # Chronos 2.0 — label entropy DC matches distinctly
+    for i in range(len(card)):
+        if i in dc_map:
+            classifications[i]["pick_type"] = "DC-Entropy"
+            classifications[i]["dc_pick"]   = dc_map[i]
+
     # --- Chronos ---
     print(f"\n  [Stage 2] Chronos forecast ...")
     pipeline = load_chronos(args.model)
@@ -1163,7 +1245,7 @@ def main():
         nd, nh, na = clamp_counts(nd, nh, na, total=13)
         counts = {"1": nh, "X": nd, "2": na}
         counts_out[scenario] = counts
-        ticket, scored = allocate_ticket(card, counts, base_rates)
+        ticket, scored = allocate_ticket(card, counts, base_rates, dc_map=dc_map)
         tickets[scenario] = ticket
 
     # --- Print ---
@@ -1193,6 +1275,20 @@ def main():
         "base_rates"   : {k: round(v,4) for k,v in base_rates.items()},
         "total_rounds" : len(fm),
         "card_signals" : card_feat,
+        "chronos2": {
+            "version"  : "2.0",
+            "dc_count" : DC_COUNT,
+            "dc_matches": [
+                {
+                    "match_index" : idx,
+                    "home"        : card[idx].get("home", card[idx].get("home_team", "")),
+                    "away"        : card[idx].get("away", card[idx].get("away_team", "")),
+                    "dc_pick"     : dc_pick,
+                    "entropy"     : round(entropies_for_json[idx], 4),
+                }
+                for idx, dc_pick in sorted(dc_map.items())
+            ],
+        },
         "draw_classifier": {
             "regime" : rules_draw["regime"],
             "source" : "rules_classifier",

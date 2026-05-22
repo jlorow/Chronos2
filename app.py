@@ -109,7 +109,8 @@ PICK_COLORS = {
     "Draw"          : "🟡",
     "Double Chance" : "🟠",
     "Speculative"   : "🔴",
-    "European"      : "🔵",
+    "DC-Entropy"    : "🔵",
+    "European"      : "🔷",
     "International" : "⚪",
 }
 
