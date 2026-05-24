@@ -232,8 +232,15 @@ def interactive_input(forecast_data, num_games):
 # 3. SCORING ENGINE
 # ================================================================
 def score_ticket(predicted, actuals):
-    """Count correct predictions."""
-    return sum(1 for p, a in zip(predicted, actuals) if p == a)
+    """Count correct predictions. Handles DC picks (1X, X2, 12)."""
+    return sum(1 for p, a in zip(predicted, actuals) if pick_correct(p, a))
+
+
+def pick_correct(pred, actual):
+    """Return True if predicted pick covers the actual result."""
+    if len(pred) == 1:
+        return pred == actual        # single pick: exact match
+    return actual in pred            # DC pick: actual must be inside e.g. "1" in "12"
 
 
 def compute_distribution_error(forecast, actuals):
@@ -377,7 +384,7 @@ def print_report(forecast_data, actuals, scores_list, actuals_block):
         pred    = base_ticket[i] if i < len(base_ticket) else "?"
         actual  = actuals[i]
         score   = scores_list[i] if scores_list else None
-        correct = "✓" if pred == actual else "✗"
+        correct = "✓" if pick_correct(pred, actual) else "✗"
         matchup = ""
         if base_matches and i < len(base_matches):
             m       = base_matches[i]
